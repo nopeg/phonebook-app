@@ -1,5 +1,7 @@
 FROM node:16-alpine
 
+RUN apk add --no-cache mongodb-tools
+
 WORKDIR /app
 
 COPY package*.json ./
@@ -9,4 +11,4 @@ COPY . .
 
 EXPOSE 3000
 
-CMD ["node", "server.js"]
+CMD sh -c "mongod --fork --logpath /var/log/mongod.log --dbpath /data/db && node server.js"
