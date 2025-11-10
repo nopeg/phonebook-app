@@ -1,0 +1,12 @@
+{
+  "name": "phonebook-app",
+  "version": "1.0.0",
+  "description": "Simple Phonebook REST API",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "mongodb": "^4.0.0"
+  }
+}

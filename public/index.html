@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Телефонная книга</title>
+    <style>
+        body { font-family: Arial, sans-serif; max-width: 800px; margin: 0 auto; padding: 20px; }
+        .contact { border: 1px solid #ddd; padding: 10px; margin: 10px 0; }
+        button { margin: 5px; padding: 5px 10px; cursor: pointer; }
+        input { margin: 5px; padding: 5px; width: 200px; }
+        .contact-list { margin-top: 20px; }
+    </style>
+</head>
+<body>
+    <h1>Телефонная книга</h1>
+    
+    <div>
+        <h2>Добавить новый контакт</h2>
+        <input type="text" id="nameInput" placeholder="Имя">
+        <input type="text" id="phoneInput" placeholder="Телефон">
+        <button onclick="addContact()">Добавить контакт</button>
+    </div>
+
+    <div class="contact-list" id="contactsList"></div>
+
+    <div style="margin-top: 20px;">
+        <a href="/admin">Просмотр базы данных</a>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
