@@ -1,0 +1,19 @@
+services:
+  - type: web
+    name: phonebook-app
+    env: docker
+    docker:
+      dockerfile: Dockerfile
+    envVars:
+      - key: MONGODB_URI
+        fromDatabase:
+          name: phonebook-db
+          property: connectionString
+
+  - type: pserv
+    name: phonebook-db
+    diskSize: 10
+    env: docker
+    docker:
+      image: mongo:latest
+    port: 27017
